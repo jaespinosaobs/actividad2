@@ -1,4 +1,3 @@
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import spellsData from '../data/spells.json';
 import { useState, useRef, useEffect } from 'react';
 
@@ -29,7 +28,6 @@ const SpellBadge = ({ spell }) => {
   const [tooltipPosition, setTooltipPosition] = useState({ top: 0, left: 0 });
   const badgeRef = useRef(null);
   
-  // Calculate tooltip position when badge is hovered
   useEffect(() => {
     if (showTooltip && badgeRef.current) {
       const rect = badgeRef.current.getBoundingClientRect();
